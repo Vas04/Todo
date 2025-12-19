@@ -1,0 +1,138 @@
+/* src/App.css */
+
+/* 1. Main Container & Background */
+.app-container {
+  min-height: 100vh; /* Ensures it covers the whole screen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  /* Deep Professional Green/Teal Gradient */
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+/* 2. Glassmorphism Card Effect */
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Low opacity white */
+  backdrop-filter: blur(12px);          /* Blurs the background behind the card */
+  padding: 40px;
+  border-radius: 16px;
+  width: 450px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* 3. Input Area */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  flex-grow: 1;
+  font-size: 16px;
+  outline: none;
+}
+
+/* 4. Main "Add Task" Button */
+.interactive-btn {
+  background-color: #00b4db; /* Bright Blue to pop against dark green */
+  background-image: linear-gradient(90deg, #00b4db 0%, #0083b0 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.interactive-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-btn:active {
+  transform: translateY(-1px);
+}
+
+/* 5. List Items */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.todo-item {
+  background: rgba(0, 0, 0, 0.3); /* Darker background for items */
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* 6. "Complete" / "Undo" Button */
+.complete-btn {
+  background-color: #28a745; /* Success Green */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: transform 0.2s ease, background-color 0.2s;
+  min-width: 90px; /* Ensures buttons are same width */
+}
+
+.complete-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.complete-btn:active {
+  transform: scale(0.95);
+}
+
+/* 7. Delete Button */
+.delete-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 100, 100, 0.5);
+  color: #ff6b6b;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: 10px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #ff6b6b;
+  color: white;
+}
